@@ -80,6 +80,8 @@ Acko.Demo.prototype = {
     }).bind(this);
 
     this.playing = true;
+    this.gl.go();
+
     requestAnimationFrame(loop);
   },
 

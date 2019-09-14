@@ -73,6 +73,10 @@ Acko.Effect.Audio.prototype = _.extend(new Acko.Effect(), {
     }.bind(this));
   },
 
+  go: function () {
+    this.source.play();
+  },
+
   // Lapped FFT filter for spectrogram message painter
   process: function (event, input, output) {
 

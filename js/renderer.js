@@ -83,6 +83,12 @@ Acko.Renderer.prototype = {
 
     this.resize();
   },
+  
+  go: function () {
+    _.each(this.effects, function (effect) {
+      effect.go && effect.go();
+    });
+  },
 
   resize: function (e) {
     if (this.autoSize && e) {
