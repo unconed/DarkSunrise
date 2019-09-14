@@ -1003,6 +1003,13 @@ ThreeAudio.Source.prototype = {
   },
 
   play: function () {
+    var c = this.context;
+
+    if (c && c.state == 'suspended') {
+      console.info('AudioContext resumed');
+      c.resume();
+    }
+
     this.playing = true;
     if (this.element.readyState == 4) {
       this._play();
